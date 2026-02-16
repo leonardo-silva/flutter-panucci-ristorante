@@ -32,12 +32,17 @@ class DrinkMenu extends StatelessWidget {
                 },
                 childCount: items.length,
               ),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount:
+                      MediaQuery.of(context).orientation == Orientation.portrait
+                          ? 2
+                          : 3,
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 8,
                   childAspectRatio:
-                      158 / 194)) // width = 158 and height = 194 (Figma)
+                      MediaQuery.of(context).orientation == Orientation.portrait
+                          ? 158 / 194
+                          : 1.2)) // width = 158 and height = 194 (Figma)
         ],
       ),
     );
