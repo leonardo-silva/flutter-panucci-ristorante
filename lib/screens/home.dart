@@ -20,8 +20,7 @@ class _HomeState extends State<Home> {
     final List<Widget> pages = [
       const Highlights(),
       const FoodMenu(),
-      //const DrinkMenu(),
-      const Checkout()
+      const DrinkMenu(),
     ];
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +40,7 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const Home();
+            return const Checkout();
           }));
         },
         child: const Icon(Icons.point_of_sale),
