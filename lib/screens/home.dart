@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/main_drawer.dart';
+import 'package:panucci_ristorante/screens/checkout.dart';
 import 'package:panucci_ristorante/screens/drink_menu.dart';
 import 'package:panucci_ristorante/screens/food_menu.dart';
 import 'package:panucci_ristorante/screens/highlights.dart';
@@ -19,7 +20,8 @@ class _HomeState extends State<Home> {
     final List<Widget> pages = [
       const Highlights(),
       const FoodMenu(),
-      const DrinkMenu()
+      //const DrinkMenu(),
+      const Checkout()
     ];
     return Scaffold(
       appBar: AppBar(
