@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
 import 'package:panucci_ristorante/components/main_drawer.dart';
 import 'package:panucci_ristorante/components/order_item.dart';
+import 'package:panucci_ristorante/components/payment_method.dart';
+import 'package:panucci_ristorante/components/payment_total.dart';
 
 class Checkout extends StatelessWidget {
   const Checkout({super.key});
@@ -38,7 +40,7 @@ class Checkout extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'Roboto',
                     fontSize: 24,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               ),
             )),
             SliverList(
@@ -50,7 +52,35 @@ class Checkout extends StatelessWidget {
                     itemPrice: items[index]['price']);
               },
               childCount: items.length,
-            ))
+            )),
+            const SliverToBoxAdapter(
+                child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                'Pagamento',
+                style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600),
+              ),
+            )),
+            const SliverToBoxAdapter(
+              child: PaymentMethod(),
+            ),
+            const SliverToBoxAdapter(
+                child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                'Confirmar',
+                style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600),
+              ),
+            )),
+            const SliverToBoxAdapter(
+              child: PaymentTotal(),
+            ),
           ],
         ),
       ),
