@@ -25,27 +25,24 @@ class _OrderItemState extends State<OrderItem> {
       color: Theme.of(context).colorScheme.surfaceContainerHighest,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Image(
-                height: 80,
-                width: 80,
-                image: AssetImage(widget.imageURI),
-                fit: BoxFit.cover,
+        children: <Widget>[
+          Image(
+            height: 80,
+            width: 80,
+            image: AssetImage(widget.imageURI),
+            fit: BoxFit.cover,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(widget.itemTitle),
+                  Text(widget.itemPrice),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(widget.itemTitle),
-                    Text(widget.itemPrice),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
           const Padding(
             padding: EdgeInsets.only(right: 8.0),
