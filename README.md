@@ -1,19 +1,25 @@
-# panucci_ristorante
-
-A Flutter project used to practise the creation of responsive layouts and constraints.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Panucci Ristorante - A Flutter project covering responsive layouts and constraints
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## Main concepts covered in this project
+
+● Limit widget sizes with constraints and understand their importance
+
+● Build appropriate layouts with correct sizes using Constraints
+
+● Implement four screens in a practical food delivery project
+
+● Implement different types of product lists
+
+● Create a responsive app that works in portrait and landscape orientations
+
+● Capture device size and orientation with Media.Query
+
+● Understand and use CustomScrollView and Slivers widgets, and classes like Media.Query
 
 ---
 ## Common viewport error
